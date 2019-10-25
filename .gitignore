@@ -1,0 +1,13 @@
+# Some Files #
+###################
+*.csv
+*.gz
+*.osc
+*.osm
+*.zip
+*.bz2
+*.pdf
+.env
+temp_*
+!sample.csv
+node_modules/

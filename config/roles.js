@@ -1,0 +1,5 @@
+ const ADMIN=1;
+const COORDINADOR=2;
+const BRIGADISTA=3;
+
+module.exports={ADMIN,COORDINADOR,BRIGADISTA}
