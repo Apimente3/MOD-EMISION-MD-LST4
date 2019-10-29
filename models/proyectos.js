@@ -1,42 +1,51 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-    return sequelize.define('propietarios', {
-        predio_id: {
+    return sequelize.define('proyectos', {
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
-        tipo_propietario_id: {
+        tipo_infraestructura_id: {
             type: DataTypes.INTEGER,
             allowNull: true
         },
-        condicion_propietario_id: {
-            type: DataTypes.INTEGER,
+        codigo: {
+            type: DataTypes.STRING,
             allowNull: true
         },
-        fecha_propiedad: {
-            type: DataTypes.DATEONLY,
+        descripcion: {
+            type: DataTypes.STRING,
             allowNull: true
         },
-        integrantes: {
+        pmd: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        concesion: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        fech_inicio: {
+            type: DataTypes.DATE,
+            allowNull: true
+        },
+        fech_fin: {
+            type: DataTypes.DATE,
+            allowNull: true
+        },
+        img_portada: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        archivos: {
             type: DataTypes.JSONB,
             allowNull: true
         },
-        poseedores: {
-            type: DataTypes.JSONB,
-            allowNull: true
-        },
-        ocupantes: {
-            type: DataTypes.JSONB,
-            allowNull: true
-        },
-        representante: {
-            type: DataTypes.JSONB,
-            allowNull: true
-        },
-        files_acreditan: {
-            type: DataTypes.JSONB,
+        polygono: {
+            type: DataTypes.GEOMETRY,
             allowNull: true
         },
         usuaregistra_id: {
@@ -52,7 +61,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         }
     }, {
-        tableName: 'propietarios',
+        tableName: 'proyectos',
         schema:'pred'
     });
 };
