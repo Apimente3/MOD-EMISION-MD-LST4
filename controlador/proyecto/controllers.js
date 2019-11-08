@@ -3,20 +3,24 @@
 const models = require('../../models');
 const uuidv1 = require('uuid/v1');
 
-const solicitudService = require('./../../servicios/solicitud/solicitud');
+const Service = require('./../../servicios/proyectos/solicitud');
 
 module.exports = {
     save,  
-    deleted
+    deleted,
+    listarProyectos,
+    resumenProyectos,
+    drpProyectos
 };
 
 /*Guarda los datos generales de un predio*/
 async function save(req, res, next) {
     const t = await models.sequelize.transaction();
     try {
+        
         let object = await models.proyectos.findOne({
             where: {
-                id: req.body.id
+                id: req.body.id ? req.body.id : 0 
             }
         });
         if (object != null) {
@@ -55,7 +59,6 @@ async function deleted(req, res, next) {
                 status: 400
             }
         }
-
         object.observacion=req.body.observacion;
         object.usuaregistra_id=req.userId;
         await object.save({t});
@@ -65,5 +68,48 @@ async function deleted(req, res, next) {
     } catch (e) {
         t.rollback();
         return next(e);
+    }
+}
+
+
+async function listarProyectos(req, res, next) {
+    try {
+             let solicitudes = await Service.listarProyectos(req.query.busqueda);
+        return res.status(200).send(solicitudes);
+        // return res.status(200).send({});
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+
+async function resumenProyectos(req, res, next) {
+    try {
+        let solicitudes = await Service.resumenProyectos();
+        return res.status(200).send(solicitudes);
+        // return res.status(200).send({});
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+
+async function drpProyectos(req, res, next) {
+    try {
+        let list = await models.proyectos.findAll({
+            attributes: ['id', 'codigo','descripcion','tipo_infraestructura_id'],
+            order: [
+                ['"createdAt"', 'DESC']
+            ]
+        });
+        return res.status(200).send(list);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
     }
 }

@@ -20,10 +20,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
-        pmd: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         concesion: {
             type: DataTypes.STRING,
             allowNull: true
@@ -36,8 +32,12 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DATE,
             allowNull: true
         },
-        img_portada: {
+        pmd: {
             type: DataTypes.STRING,
+            allowNull: true
+        },
+        imagenes: {
+            type: DataTypes.JSONB,
             allowNull: true
         },
         archivos: {
@@ -46,6 +46,10 @@ module.exports = function(sequelize, DataTypes) {
         },
         polygono: {
             type: DataTypes.GEOMETRY,
+            allowNull: true
+        },
+        polygonojson: {
+            type: DataTypes.JSONB,
             allowNull: true
         },
         usuaregistra_id: {

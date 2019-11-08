@@ -12,7 +12,8 @@ module.exports = {
     busqSolicitud,
     datosSolicitud,
     updatePolygono,
-    deleted
+    deleted,
+    drpsolicituds
 };
 
 
@@ -26,7 +27,7 @@ async function deleted(req, res, next) {
                 denominacion: req.body.denominacion
             }
         });
-        
+
         if (!solicitud) {
             throw {
                 error: "No se encontro la Peticion de Solicitud Predial.",
@@ -34,9 +35,9 @@ async function deleted(req, res, next) {
                 status: 400
             }
         }
-        
-        solicitud.observacion=req.body.observacion;
-        solicitud.usuaregistra_id=req.userId;
+
+        solicitud.observacion = req.body.observacion;
+        solicitud.usuaregistra_id = req.userId;
         await solicitud.save({t});
         await solicitud.destroy({t});
         t.commit().then();
@@ -51,8 +52,22 @@ async function create(req, res, next) {
 
     const t = await models.sequelize.transaction();
     try {
+        console.log(req.body);
         req.body.usuaregistra_id = req.userId;
-        let solicitud = await models.solicituds.create(req.body, {t});
+        let solicitudreg=req.body;
+        let proyectos_relacionados = req.body.proyectos_relacionados;
+        delete solicitudreg.proyectos_relacionados;
+        let solicitud = await models.solicituds.create(solicitudreg, {t});
+     
+        let proyectos_relacionados_insertado = []
+        for (let relacionados of proyectos_relacionados) {
+            let proyecto_solicitud = {
+                proyecto_id: relacionados.proyecto_id,
+                solicitud_id: solicitud.id,
+                usuaregistra_id: req.userId
+            }
+            proyectos_relacionados_insertado.push(await models.proyecto_solicitud.create(proyecto_solicitud, {t}));
+        }
         t.commit().then();
         return res.status(200).send(solicitud);
     } catch (e) {
@@ -85,11 +100,11 @@ async function updatePolygono(req, res, next) {
         });
 
         if (solicitud != null) {
-            
-            solicitud.geometria_json=geometria_json;
-            solicitud.geometria=geometria;
+
+            solicitud.geometria_json = geometria_json;
+            solicitud.geometria = geometria;
             await proceso.save({t});
-            
+
         } else {
             throw {
                 error: "No se encontro el polygono",
@@ -123,7 +138,7 @@ async function uploadFile(req, res, next) {
 }
 
 
-/*Para cargas los archivos del */ 
+/*Para cargas los archivos del */
 
 async function uploadFileMultiple(req, res, next) {
 
@@ -137,8 +152,8 @@ async function uploadFileMultiple(req, res, next) {
             status: 400
         }
 
-        
-        let solicitud_body={
+
+        let solicitud_body = {
             filename: filenamesaved,
             path: req.originalname,
             denominacion: req.body.denominacion,
@@ -167,6 +182,7 @@ async function busqSolicitud(req, res, next) {
     }
 }
 
+
 async function datosSolicitud(req, res, next) {
     try {
         let denominacion = req.query.denominacion;
@@ -179,5 +195,24 @@ async function datosSolicitud(req, res, next) {
         return next(err);
     }
 }
+
+async function drpsolicituds(req, res, next) {
+    try {
+        let list = await models.solicituds.findAll({
+            attributes: ['id', 'denominacion'],
+            order: [
+                ['"createdAt"', 'DESC']
+            ]
+        });
+        return res.status(200).send(list);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+
+
 
 

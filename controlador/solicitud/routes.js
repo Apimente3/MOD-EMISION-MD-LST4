@@ -8,14 +8,12 @@ module.exports = ({router}) => {
     /*para realizar la busqueda de las solicitudes mediante la fecha */
     router.get('/buscarsolicitud',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.busqSolicitud);
     router.get('/datos-solicitud',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.datosSolicitud);
+    router.get('/drpsolicituds',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.drpsolicituds);
     /*Registra un trabajador*/
     router.post('/solicitud', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.create);
     /*Delete solicitud*/
     router.delete('/solicitud', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.deleted);
-    
     router.put('/update-polygono', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.updatePolygono);
-
-
     router.post('/uploadsolicitud', validateToken, AccesoRoles([ADMIN, COORDINADOR]), uploadarchivo, controller.uploadFile);
     //router.post('/uploadsolicitudmultiple', validateToken, AccesoRoles([ADMIN, COORDINADOR]), uploadarchivoMultiple, controller.uploadFileMultiple);
 
