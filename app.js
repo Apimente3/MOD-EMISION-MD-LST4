@@ -50,9 +50,7 @@ app.use(require('express-status-monitor')({
     path: '/estado-servidor',
    
 }));
-
-
-// app.use(assignId);
+ // app.use(assignId);
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url :status" [:date[clf]] :user-agent :response-time ms :referrer'));
 
 const io = require('socket.io')(server, {
