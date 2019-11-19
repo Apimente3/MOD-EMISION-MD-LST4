@@ -16,7 +16,8 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
-        descripcion: {
+
+        url_ortofoto: {
             type: DataTypes.STRING,
             allowNull: true
         },
@@ -33,6 +34,10 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         pmd: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        portada_imagen: {
             type: DataTypes.STRING,
             allowNull: true
         },

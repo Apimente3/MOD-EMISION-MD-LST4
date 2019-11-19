@@ -16,7 +16,8 @@ module.exports = {
     listarPredios,
     save_datos_predio,save_ubicacion_predio,
     obtenerPredio,
-    obtenerDatosGenerales,obtener_ubicacion_predio
+    obtenerDatosGenerales,obtener_ubicacion_predio,
+    getPrediosbyProyecto
     
 
 };
@@ -182,6 +183,19 @@ async function listarPredios(req, res, next) {
     try {
         let solicitud_id = req.query.solicitud_id;
         let response = await predioService.getPrediosbySolicitud(solicitud_id);
+        return res.status(200).send(response);
+    } catch (e) {
+
+        return next(e);
+    }
+}
+
+/*Listado de solictud de los predios*/
+async function getPrediosbyProyecto(req, res, next) {
+    try {
+        let cod_proy = req.query.codigo_proyecto;
+        let busq=req.query.busqueda;
+        let response = await predioService.getPrediosbyProyecto(cod_proy,busq);
         return res.status(200).send(response);
     } catch (e) {
 

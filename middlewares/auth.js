@@ -14,6 +14,7 @@ module.exports = {
             if (token) {
                 const decoded = await decodeToken(token);
                 req.userId = decoded.id;
+                req.body.usuaregistra_id=decoded.id;
                 if (decoded.fechaExpiracion <= moment().unix()) {
                     return next({
                         error: "Token expirado",

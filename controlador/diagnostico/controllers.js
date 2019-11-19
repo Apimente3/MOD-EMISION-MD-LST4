@@ -47,7 +47,6 @@ async function save_inspeccion_campo(req, res, next) {
 }
 
 async function save_informe_diagnostico(req, res, next) {
-
     const t = await models.sequelize.transaction();
     try {
         let informe_diagnostico = req.body;

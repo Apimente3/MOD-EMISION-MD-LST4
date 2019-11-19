@@ -7,8 +7,10 @@ module.exports = ({router}) => {
 
     /*para realizar la busqueda de las solicitudes mediante la fecha */
     router.get('/buscarsolicitud',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.busqSolicitud);
+    router.get('/buscarsolicitud-proyecto',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.busquedaSolictudbyProyecto);
     router.get('/datos-solicitud',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.datosSolicitud);
     router.get('/drpsolicituds',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.drpsolicituds);
+    router.get('/drpsolicituds-proy',validateToken,  AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.drpsolicitudsbyProy);
     /*Registra un trabajador*/
     router.post('/solicitud', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.create);
     /*Delete solicitud*/

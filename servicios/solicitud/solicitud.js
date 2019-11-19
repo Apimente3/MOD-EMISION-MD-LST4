@@ -9,7 +9,10 @@ const turf = require('turf')
 
 module.exports = {
 
-    busquedaSolictud,datosSolicitud
+    busquedaSolictud,
+    datosSolicitud,
+    drpSolicitudbyProy,
+    busquedaSolictudbyProyecto
 };
 
 
@@ -54,14 +57,45 @@ async function busquedaSolictud(fecha_inicio, fecha_fin) {
 
 
 
+async function busquedaSolictudbyProyecto(codigo_proyecto) {
+    try {
+
+        //  console.log('servicio',placa, password)
+        let sql =`
+            select c.denominacion tipoinfraestructura ,b.denominacion tipoproyecto ,to_char(a."createdAt",'dd/mm/yyyy HH24:mi') fecha_registro,a.* 
+            from pred.solicituds a
+            inner join pred.tipoproyecto b on a.tipoproy_id=b.id
+            inner join pred.tipoinfraestructura c on a.tipoinfra_id=c.id
+            inner join pred.proyecto_solicitud d on d.solicitud_id=a.id
+            inner join pred.proyectos e on d.proyecto_id=e.id
+            where
+            e.codigo='${codigo_proyecto}'
+            order by a."createdAt" desc
+        `;
+       
+        const solicitudes = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
+        if (!solicitudes) {
+            throw {
+                error: new Error("no existen solicitudes vinculados a ese proyecto : "),
+                message: "solicitudes no existentes",
+                status: 401
+            };
+        }
+        return solicitudes;
+    }
+    catch (err) {
+        throw err;
+    }
+}
+
 
 async function datosSolicitud(denominacion) {
     try {
 
         //  console.log('servicio',placa, password)
         let sql = "";
-  
-            sql = `
+
+        sql = `
           select c.denominacion tipoinfraestructura ,b.denominacion tipoproyecto ,to_char(a."createdAt",'dd/mm/yyyy HH24:mi') fecha_registro
 ,d.nombres ||' '|| d.apellidos responsable
 , e.denominacion brigada
@@ -74,8 +108,7 @@ async function datosSolicitud(denominacion) {
 		  where ltrim(rtrim(a.denominacion))= ltrim(rtrim('${denominacion}'))
 
      `;
- 
-       
+
 
         const solicitud = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
         if (!solicitud) {
@@ -86,6 +119,32 @@ async function datosSolicitud(denominacion) {
             };
         }
         return solicitud;
+    }
+    catch (err) {
+        throw err;
+    }
+}
+
+async function drpSolicitudbyProy(cod_proy) {
+    try {
+        //  console.log('servicio',placa, password)
+        let sql = `
+            select c.id,c.denominacion from pred.proyecto_solicitud a
+            inner join pred.proyectos b on b.id=a.proyecto_id
+            inner join pred.solicituds c on c.id=a.solicitud_id
+            where b.codigo='${cod_proy}'
+
+     `;
+        console.log(sql);
+        const list = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
+        if (!list) {
+            throw {
+                error: new Error("no existen clientes asignado para este dia : "),
+                message: "Trabajadores no asignados",
+                status: 401
+            };
+        }
+        return list;
     }
     catch (err) {
         throw err;

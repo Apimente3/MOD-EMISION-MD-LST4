@@ -12,6 +12,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
+        codigo_proyecto: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         descripcion: {
             type: DataTypes.STRING,
             allowNull: true

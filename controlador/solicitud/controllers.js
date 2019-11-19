@@ -10,10 +10,12 @@ module.exports = {
     uploadFile,
     uploadFileMultiple,
     busqSolicitud,
+    busquedaSolictudbyProyecto,
     datosSolicitud,
     updatePolygono,
     deleted,
-    drpsolicituds
+    drpsolicituds,
+    drpsolicitudsbyProy
 };
 
 
@@ -54,11 +56,11 @@ async function create(req, res, next) {
     try {
         console.log(req.body);
         req.body.usuaregistra_id = req.userId;
-        let solicitudreg=req.body;
+        let solicitudreg = req.body;
         let proyectos_relacionados = req.body.proyectos_relacionados;
         delete solicitudreg.proyectos_relacionados;
         let solicitud = await models.solicituds.create(solicitudreg, {t});
-     
+
         let proyectos_relacionados_insertado = []
         for (let relacionados of proyectos_relacionados) {
             let proyecto_solicitud = {
@@ -182,6 +184,19 @@ async function busqSolicitud(req, res, next) {
     }
 }
 
+/*Busqueda de solcitud por proyecto*/
+async function busquedaSolictudbyProyecto(req, res, next) {
+    try {
+        let codigo_proyecto = req.query.codigo_proyecto;
+        let solicitudes = await solicitudService.busquedaSolictudbyProyecto(codigo_proyecto);
+        return res.status(200).send(solicitudes);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
 
 async function datosSolicitud(req, res, next) {
     try {
@@ -211,6 +226,19 @@ async function drpsolicituds(req, res, next) {
         return next(err);
     }
 }
+
+
+async function drpsolicitudsbyProy(req, res, next) {
+    try {
+        let list = await solicitudService.drpSolicitudbyProy(req.query.codigo_proyecto);
+        return res.status(200).send(list);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
 
 
 

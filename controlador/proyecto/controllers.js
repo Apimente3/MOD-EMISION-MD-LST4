@@ -10,7 +10,10 @@ module.exports = {
     deleted,
     listarProyectos,
     resumenProyectos,
-    drpProyectos
+    resumenProyectosbyCodigo,
+    drpProyectos,
+    getProyecto,
+    solicitudesVinculadas
 };
 
 /*Guarda los datos generales de un predio*/
@@ -98,6 +101,31 @@ async function resumenProyectos(req, res, next) {
 }
 
 
+async function resumenProyectosbyCodigo(req, res, next) {
+    try {
+        let solicitudes = await Service.resumenProyectosbyCodigo(req.query.codigo);
+        return res.status(200).send(solicitudes);
+        // return res.status(200).send({});
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+async function solicitudesVinculadas(req, res, next) {
+    try {
+        let solicitudes = await Service.solicitudesVinculadas(req.query.codigo);
+        return res.status(200).send(solicitudes);
+        // return res.status(200).send({});
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+
 async function drpProyectos(req, res, next) {
     try {
         let list = await models.proyectos.findAll({
@@ -107,6 +135,21 @@ async function drpProyectos(req, res, next) {
             ]
         });
         return res.status(200).send(list);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+async function getProyecto(req, res, next) {
+    try {
+        let object = await models.proyectos.findOne({
+            where : {
+                codigo:req.params.codigo_proyecto
+            }
+        });
+        return res.status(200).send(object);
     }
     catch (err) {
         //  t.rollback();

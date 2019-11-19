@@ -7,6 +7,7 @@ module.exports = ({router}) => {
 
     router.post('/predio', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.create);
     router.get('/predios', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.listarPredios);
+    router.get('/predios-proyecto', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.getPrediosbyProyecto);
     router.get('/obtenerPredio/:codigo', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.obtenerPredio);
     router.post('/predios-save', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.save);
     router.post('/save_datos_predio', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.save_datos_predio);
