@@ -15,6 +15,8 @@ module.exports = ({router}) => {
     
     router.get('/datosgenerales/:predio_id', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.obtenerDatosGenerales);
     router.get('/obtener_ubicacion_predio/:predio_id', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.obtener_ubicacion_predio);
+    /*Obtiene los Propietarios del Predio*/
+    router.get('/obtener_sujetopasivo/:codigo_predio', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.obtener_sujetopasivo);
    
 
 

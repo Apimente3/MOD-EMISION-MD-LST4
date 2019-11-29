@@ -20,13 +20,16 @@ async function busquedaEquipos(busqueda) {
         let sql = `
             
             
-            SELECT a.id,a.denominacion,to_char(a."createdAt",'dd/mm/yyyy HH24:mi') fecha_registro,case when b.cantIntegrantes is null then 0 else  b.cantIntegrantes end cantintegrantes
+          SELECT a.id,a.denominacion,to_char(a."createdAt",'dd/mm/yyyy HH24:mi') fecha_registro,case when b.cantIntegrantes is null then 0 else  b.cantIntegrantes end cantintegrantes
             , c.nombres||' '||c.apellidos responsable  FROM pred.equipos a 
-            left join (select equipo_id, sum(id) cantIntegrantes from pred.integrantes group by equipo_id ) b on a.id=b.equipo_id
-            left join pred.profesional_ddp c on a.responsable_id=c.id
-            where a.denominacion ilike '%${busqueda}%'
-            order by a."createdAt" desc
-            limit 30
+            LEFT join (select equipo_id, count(a.id) cantIntegrantes from pred.integrantes a
+						inner join pred.profesional_ddp c on a.integrante_id=c.id
+						
+						group by equipo_id ) b on a.id=b.equipo_id
+            LEFT join pred.profesional_ddp c on a.responsable_id=c.id
+            where a.denominacion||' '|| c.nombres||' '||c.apellidos  ilike '%${busqueda}%'
+			
+            order by a.id desc
 			
      `;
         console.log(sql)
@@ -58,6 +61,7 @@ async function detailsEquipo(id) {
         where id=${id}
         `;
       
+        console.log(sql)
         const [equipo] = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
 
         if (!equipo) {

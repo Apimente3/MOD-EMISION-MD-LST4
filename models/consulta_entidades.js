@@ -12,6 +12,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: true
         },
+        proyecto_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
         institucion: {
             type: DataTypes.STRING,
             allowNull: true

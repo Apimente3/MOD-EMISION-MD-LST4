@@ -17,7 +17,8 @@ module.exports = {
     save_datos_predio,save_ubicacion_predio,
     obtenerPredio,
     obtenerDatosGenerales,obtener_ubicacion_predio,
-    getPrediosbyProyecto
+    getPrediosbyProyecto,
+    obtener_sujetopasivo
     
 
 };
@@ -213,6 +214,27 @@ async function obtenerPredio(req, res, next) {
             }
         });
         return res.status(200).send(response);
+    } catch (e) {
+
+        return next(e);
+    }
+}
+
+/*Listado de solictud de los predios*/
+async function obtener_sujetopasivo(req, res, next) {
+    try {
+
+        let predio = await models.predios.findOne({
+            where: {
+                codigo: req.params.codigo_predio
+            }
+        });
+        let sujetopasivo = await models.propietarios.findOne({
+            where: {
+                predio_id: predio.id
+            }
+        });
+        return res.status(200).send(sujetopasivo);
     } catch (e) {
 
         return next(e);

@@ -2,12 +2,13 @@
 "use strict";
 
 const models = require('../../models');
-const predioService = require('./../../servicios/predios/predios');
+const Service = require('./../../servicios/sujeto_pasivo/sujeto_pasivo');
 const Op = models.Sequelize.Op;
 
 module.exports = {
     save_propietario,
-    list_propietario
+    list_propietario,
+    list_propietario_predio
     };
 
 
@@ -52,6 +53,18 @@ async function list_propietario(req, res, next) {
                 predio_id: req.query.predio_id
             }
         });
+        return res.status(200).send(response);
+    }
+    catch (err) {
+        return next(err);
+    }
+}
+
+/*Listado de solictud de los predios*/
+async function list_propietario_predio(req, res, next) {
+    try {
+      
+        let [response] = await  Service.propietariosbyPredio(req.query.codigo)
         return res.status(200).send(response);
     }
     catch (err) {

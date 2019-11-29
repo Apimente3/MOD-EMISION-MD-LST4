@@ -15,6 +15,7 @@ module.exports = ({router}) => {
     router.post('/equipo', validateToken,AccesoRoles([ADMIN,BRIGADISTA,COORDINADOR]), controller.create);
         
     router.post('/add-integrante', validateToken,AccesoRoles([ADMIN,BRIGADISTA,COORDINADOR]), controller.addIntegrante);
+    router.post('/eliminarintegrante', validateToken,AccesoRoles([ADMIN,BRIGADISTA,COORDINADOR]), controller.delIntegrante);
 
  
 

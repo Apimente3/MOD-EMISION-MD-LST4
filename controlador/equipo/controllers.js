@@ -10,6 +10,7 @@ module.exports = {
     addIntegrante,
     busquedaEquipos,
     detailsEquipo,
+    delIntegrante
 };
 
 
@@ -103,4 +104,36 @@ async function addIntegrante(req, res, next) {
         return next(e);
     }
 }
+
+
+
+async function delIntegrante(req, res, next) {
+    const t = await models.sequelize.transaction();
+    try {
+
+        let object = await models.integrantes.findOne({
+            where: {
+                id: req.body.id
+            }
+        });
+
+        if (!object) {
+            throw {
+                error: "No se encontro .",
+                message: "No se encontro .",
+                status: 400
+            }
+        }
+        object.observacion=req.body.observacion;
+        object.usuaregistra_id=req.userId;
+        await object.save({t});
+        await object.destroy({t});
+        t.commit().then();
+        return res.status(200).send(object);
+    } catch (e) {
+        t.rollback();
+        return next(e);
+    }
+}
+
 

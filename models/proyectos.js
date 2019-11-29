@@ -11,6 +11,18 @@ module.exports = function(sequelize, DataTypes) {
         tipo_infraestructura_id: {
             type: DataTypes.INTEGER,
             allowNull: true
+        }, 
+        tipo_documento_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        responsable_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        brigada_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         },
         codigo: {
             type: DataTypes.STRING,
@@ -21,6 +33,14 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
+        organo_solicitante: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        descripcion: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         concesion: {
             type: DataTypes.STRING,
             allowNull: true
@@ -28,8 +48,15 @@ module.exports = function(sequelize, DataTypes) {
         fech_inicio: {
             type: DataTypes.DATE,
             allowNull: true
+        },  fech_inicio: {
+            type: DataTypes.DATE,
+            allowNull: true
         },
         fech_fin: {
+            type: DataTypes.DATE,
+            allowNull: true
+        },
+        fech_asig_brigada: {
             type: DataTypes.DATE,
             allowNull: true
         },
@@ -38,6 +65,37 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         portada_imagen: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        portada_imagen2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
+        portada_imagen3: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
+
+        departamento: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },  codigo_geotupu: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        provincia: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        distrito: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        
+        observacion: {
             type: DataTypes.STRING,
             allowNull: true
         },

@@ -11,6 +11,10 @@ module.exports = function(sequelize, DataTypes) {
         solicitud_id: {
             type: DataTypes.INTEGER,
             allowNull: true
+        }, 
+        proyecto_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         },
         objetivo: {
             type: DataTypes.STRING,

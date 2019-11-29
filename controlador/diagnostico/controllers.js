@@ -64,8 +64,8 @@ async function save_informe_diagnostico(req, res, next) {
 async function listDiagnostico(req, res, next) {
     try {
 
-        let solicitud_id = req.query.solicitud_id;
-        let response = await diagnosticoService.list_diagnostico(solicitud_id);
+        let proyecto_id = req.query.proyecto_id;
+        let response = await diagnosticoService.list_diagnostico(proyecto_id);
         return res.status(200).send(response);
     } catch (e) {
 

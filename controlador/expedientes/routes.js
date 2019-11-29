@@ -7,6 +7,7 @@ module.exports = ({router}) => {
 
     router.post('/expediente', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.save);
     router.delete('/expediente', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.deleted);
+    router.get('/expedientespredio', validateToken,AccesoRoles([ADMIN,COORDINADOR]), controller.getExpedientebyPredio);
     
     
     

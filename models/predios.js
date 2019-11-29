@@ -3,18 +3,19 @@
 module.exports = function(sequelize, DataTypes) {
     return sequelize.define('predios', {
         id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        codigo: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         codigo_proyecto: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        codigo: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            primaryKey: true
         },
         descripcion: {
             type: DataTypes.STRING,
@@ -40,8 +41,12 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.JSONB,
             allowNull: true
         },
-        polygono_inicial: {
+        polygono: {
             type: DataTypes.GEOMETRY,
+            allowNull: true
+        },
+        polygonojson: {
+            type: DataTypes.JSONB,
             allowNull: true
         },
         polygono_afectado: {
@@ -55,6 +60,14 @@ module.exports = function(sequelize, DataTypes) {
         },
         usuaregistra_id: {
             type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            allowNull: true
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
             allowNull: true
         }
     }, {

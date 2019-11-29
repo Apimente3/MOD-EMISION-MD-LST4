@@ -15,7 +15,6 @@ module.exports = {
 };
 
 
-
 async function getTrabajadoresDDP(dni) {
     try {
 
@@ -27,14 +26,14 @@ async function getTrabajadoresDDP(dni) {
 	inner join pred.rol_ddp b on a.rol=b.id
     where (nombres||' '||apellidos ilike '%${dni}%')
 	or
-	dni ilike '%${dni}%' order by "updatedAt" desc limit 10
+	dni ilike '%${dni}%' order by "updatedAt" desc
 
      `;
         console.log(sql)
         const trabajadores = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
         if (!trabajadores) {
             throw {
-                error: new Error("no existen clientes asignado para este dia : " ),
+                error: new Error("no existen clientes asignado para este dia : "),
                 message: "Trabajadores no asignados",
                 status: 401
             };
@@ -60,30 +59,49 @@ async function getResposables() {
         console.log(sql)
         const responsables = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
 
-         sql = `
+        sql = `
         
   SELECT ID,DENOMINACION,responsable_id COORDINADOR_ID FROM pred.equipos
 
      `;
         console.log(sql)
         const equipos = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
-        
+
+        let integrantes_equipo = []
+        for (let i=0;i<equipos.length; i++) {
+            equipos[i].integrantes=[]
+
+            sql = `
+             select b.id brigada_id, b.denominacion,b.responsable_id,
+            a.*,c.nombres int_nombres,c.apellidos int_apellidos,c.cargo,d.denominacion from pred.integrantes a
+            inner join pred.equipos b on a.equipo_id=b.id
+            inner join pred.profesional_ddp c on c.id=a.integrante_id
+			inner join pred.tipointegrante d on a.tipointegrante_id=d.id
+                 where equipo_id=${equipos[i].id}`
+
+            console.log('---->', sql)
+
+            equipos[i].integrantes.push( ...await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT}));
+        }
+
+
         /**/
         if (!responsables) {
             throw {
-                error: new Error("no existen clientes asignado para este dia : " ),
+                error: new Error("no existen clientes asignado para este dia : "),
                 message: "Trabajadores no asignados",
                 status: 401
             };
         }
-        
-        return {responsables,equipos};
+
+        console.log('Integrante Equipo======>', integrantes_equipo)
+
+        return {responsables, equipos, integrantes_equipo};
     }
     catch (err) {
         throw err;
     }
 }
-
 
 
 async function getBrigadistas() {
@@ -99,11 +117,11 @@ async function getBrigadistas() {
         console.log(sql)
         const brigadistas = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
 
- 
+
         /**/
         if (!brigadistas) {
             throw {
-                error: new Error("no existen clientes asignado para este dia : " ),
+                error: new Error("no existen clientes asignado para este dia : "),
                 message: "Trabajadores no asignados",
                 status: 401
             };
@@ -117,26 +135,35 @@ async function getBrigadistas() {
 }
 
 
+async function getBrigadistas() {
+    try {
+
+        //  console.log('servicio',placa, password)
+        let sql = `
+        
+      	select id, nombres||' '|| apellidos "value" from pred.profesional_ddp
+	where rol in (3) 
+
+     `;
+        console.log(sql)
+        const brigadistas = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
 
 
+        /**/
+        if (!brigadistas) {
+            throw {
+                error: new Error("no existen clientes asignado para este dia : "),
+                message: "Trabajadores no asignados",
+                status: 401
+            };
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return brigadistas;
+    }
+    catch (err) {
+        throw err;
+    }
+}
 
 
 /*Implementado la funcion del login de un transportista*/
@@ -266,7 +293,7 @@ SELECT "id", "codigo_cliente", "direccion_nro", "fecha_entrega", "codigo_licenci
 
         if (!clientes) {
             throw {
-                error: new Error("no existen clientes asignado para este dia : " ),
+                error: new Error("no existen clientes asignado para este dia : "),
                 message: "Clientes no asignados",
                 status: 401
             };
@@ -297,8 +324,8 @@ async function finalizarCliente(transaccion, hora, motivo, incidente, foto) {
             status: 404
         };
 
-        cliente.estado_planilla = (cliente.estado_planilla==0)? 5: cliente.estado_planilla;
-        cliente.finalizado=true;
+        cliente.estado_planilla = (cliente.estado_planilla == 0) ? 5 : cliente.estado_planilla;
+        cliente.finalizado = true;
         cliente.fin_ruta_hora = hora;
         cliente.fin_ruta_motivo = motivo;
         cliente.fin_ruta_incidente = incidente;

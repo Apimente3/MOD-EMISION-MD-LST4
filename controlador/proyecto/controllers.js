@@ -4,6 +4,8 @@ const models = require('../../models');
 const uuidv1 = require('uuid/v1');
 
 const Service = require('./../../servicios/proyectos/solicitud');
+const predioService = require('./../../servicios/predios/predios');
+const equipo_services = require('./../../servicios/equipos/equipos');
 
 module.exports = {
     save,  
@@ -104,6 +106,21 @@ async function resumenProyectos(req, res, next) {
 async function resumenProyectosbyCodigo(req, res, next) {
     try {
         let solicitudes = await Service.resumenProyectosbyCodigo(req.query.codigo);
+        
+        let detalleequipo = await equipo_services.detailsEquipo(solicitudes[0].id);
+        let predios = await predioService.getPrediosbyProyecto(req.query.codigo,'');
+
+        for (var i = 0; i < predios.length; i++) {
+            let propiedadAnt=null
+            propiedadAnt={...(predios[i].polygonojson.features[0].properties),...predios[i]}
+            console.log(propiedadAnt)
+           
+            // predios[i].polygonojson.features[0].properties=propiedadAnt
+        }
+        
+        solicitudes[0].predios=predios;
+      //  solicitudes[0].brigadaresposable=detalleequipo;
+        
         return res.status(200).send(solicitudes);
         // return res.status(200).send({});
     }
@@ -149,6 +166,7 @@ async function getProyecto(req, res, next) {
                 codigo:req.params.codigo_proyecto
             }
         });
+        console.log(object)
         return res.status(200).send(object);
     }
     catch (err) {

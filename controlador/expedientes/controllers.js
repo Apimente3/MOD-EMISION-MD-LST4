@@ -7,7 +7,8 @@ const Op = models.Sequelize.Op;
 
 module.exports = {
     save,
-    deleted
+    deleted,
+    getExpedientebyPredio
 };
 
 
@@ -73,4 +74,24 @@ async function deleted(req, res, next) {
         return next(e);
     }
 }
+
+
+
+async function getExpedientebyPredio(req, res, next) {
+    try {
+        let object = await models.expedientes.findAll({
+            where: {
+                predio_codigo: req.query.codigo_predio
+            }
+        });
+        // t.commit();
+        return res.status(200).send(object);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+
 

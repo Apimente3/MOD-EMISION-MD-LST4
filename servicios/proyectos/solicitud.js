@@ -14,7 +14,7 @@ async function listarProyectos(busqueda) {
         let sql = "";
 
         sql = `
-         select a.id, b.denominacion tipo_infraestructura,a.codigo,a.descripcion,a.pmd, b.icono, b.image,a.portada_imagen
+         select a.id idproyecto, b.denominacion tipo_infraestructura,a.codigo,a.descripcion,a.pmd, b.icono, b.image,a.portada_imagen
            ,to_char(a."createdAt",'yyyy/mm/dd hh24:mi') fecha_creacion
           from  pred.proyectos  a
  inner join pred.tipoinfraestructura b on b.id=a.tipo_infraestructura_id

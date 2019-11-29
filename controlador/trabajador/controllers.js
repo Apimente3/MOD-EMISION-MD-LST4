@@ -73,9 +73,9 @@ async function getResponsables(req, res, next) {
     // const t = await models.sequelize.transaction();
     try {
      
-        let {responsables,equipos} = await trbajador_ddp.getResposables();
-        console.log({responsables,equipos})
-        return res.status(200).send({responsables,equipos});
+        let data = await trbajador_ddp.getResposables();
+       // console.log({responsables,equipos})
+        return res.status(200).send(data);
     }
     catch (err) {
         //  t.rollback();
@@ -102,6 +102,23 @@ async function getBrigadistas(req, res, next) {
         return next(err);
     }
 }
+
+
+async function getBrigadistasbyBrigada(req, res, next) {
+    /*Creamos la transaccion*/
+    // const t = await models.sequelize.transaction();
+    try {
+
+        let brigadista = await trbajador_ddp.getBrigadistas(req.query.brigada_id);
+
+        return res.status(200).send(brigadista);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
 
 /**
  * Guardda el modelo

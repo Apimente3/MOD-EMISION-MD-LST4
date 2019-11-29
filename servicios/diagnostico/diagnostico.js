@@ -8,7 +8,7 @@ module.exports = {
 
 
 
-async function list_diagnostico(solicitud_id) {
+async function list_diagnostico(proyecto_id) {
     try {
 
         let response={};
@@ -26,7 +26,7 @@ async function list_diagnostico(solicitud_id) {
             ,c.nombres||' '||c.apellidos usuareg_consulta FROM pred.consulta_entidades a
             inner join pred.entidades_consulta b on a.entidad_consulta_id=b.id
             inner join pred.profesional_ddp c on c.id=a.usuareg_id
-            where solicitud_id=${solicitud_id}
+            where proyecto_id=${proyecto_id}
             ) t1 FULL OUTER JOIN 
             (
             SELECT a.id idvisita,  objetivo, actividades, fecha_inicio , fecha_fin  
@@ -35,19 +35,20 @@ async function list_diagnostico(solicitud_id) {
             ,c.nombres||' '||c.apellidos usuareg_visita
             FROM pred.inspeccion_campo a
             inner join pred.profesional_ddp c on c.id=a.usuareg_id
-            where solicitud_id=${solicitud_id}	
+            where proyecto_id=${proyecto_id}	
             ) t2 ON (1 = 0)
             
             ORDER BY fecha_envio_oficio,fecha_inicio desc
 
      `;
+        
 
          response.actividades = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
 
         sql = `
        select a.*,b.nombres||' '||b.apellidos usua_reg from pred.informe_diagnostico a 
  inner join pred.profesional_ddp b on a.usuareg_id=b.id
-        where a.solicitud_id=${solicitud_id}
+        where a.proyecto_id=${proyecto_id}
      `;
 
         response.informe_final = await models.sequelize.query(sql, {type: models.sequelize.QueryTypes.SELECT});
