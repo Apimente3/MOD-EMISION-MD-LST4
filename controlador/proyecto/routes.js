@@ -16,6 +16,5 @@ module.exports = ({router}) => {
     router.post('/saveproyecto', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.save);
     /*Delete solicitud*/
     router.delete('/deleteproyecto', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.deleted);
-
     router.get('/aporte-proyectos-codigo', controller.resumenProyectosbyCodigo);
 }
