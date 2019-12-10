@@ -10,7 +10,7 @@ module.exports = {
 
 async function getExpbyProyecto(req, res, next) {
     try {
-        let list = await models.adquisicion_predial.findAll({
+        let list = await models.expedientes.findAll({
             where: {
                 proyecto_codigo:req.query.proyecto_codigo
             }
@@ -29,9 +29,9 @@ async function save(req, res, next) {
     const t = await models.sequelize.transaction();
     try {
 
-        let object = await models.adquisicion_predial.findOne({
+        let object = await models.expedientes.findOne({
             where: {
-                expediente_id: req.body.expediente_id ? req.body.expediente_id : 0
+                id: req.body.id ? req.body.id : 0
             }
         });
         if(object != null) {
@@ -42,7 +42,7 @@ async function save(req, res, next) {
             object.usuaregistra_id=req.userId;
             await object.save({t});
         } else {
-            object = await models.adquisicion_predial.create({...req.body,usuaregistra_id:req.userId},{t});
+            object = await models.expedientes.create({...req.body,usuaregistra_id:req.userId},{t});
         }
         t.commit().then();
         return res.status(200).send(object);
