@@ -14,7 +14,8 @@ module.exports = {
     fase
     ,ubigeo,
     tipo_propietario,
-    condicion_propietario
+    condicion_propietario,
+    organo_solicitante
 };
 
 
@@ -119,5 +120,18 @@ async function condicion_propietario(req, res, next) {
         return next(e);
     }
 }
+
+
+async function organo_solicitante(req, res, next) {
+    try {
+        let maestros = await models.organo_solicitante.findAll({
+        });
+        return res.status(200).send(maestros);
+    } catch (e) {
+
+        return next(e);
+    }
+}
+
 
 

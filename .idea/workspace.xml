@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/controlador/proyecto/controllers.js" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f37066dc-c620-43e1-9611-0619f9c60f69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controlador/visor_geografico/controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlador/visor_geografico/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicios/visor_geografico/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/organo_solicitante.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios/expedientes/expediente.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/adquision_predial/controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/adquision_predial/controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/brigada/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/brigada/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/equipo/controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/equipo/controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/equipo/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/equipo/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/expedientes/controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/expedientes/controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/expedientes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/expedientes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/maestros/controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/maestros/controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/maestros/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/maestros/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/proyecto/controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/proyecto/controllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/proyecto/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/proyecto/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/4XX.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/4XX.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/tipoinfraestructura.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/tipoinfraestructura.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/tipoproyectos.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/tipoproyectos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios/equipos/equipos.js" beforeDir="false" afterPath="$PROJECT_DIR$/servicios/equipos/equipos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios/proyectos/solicitud.js" beforeDir="false" afterPath="$PROJECT_DIR$/servicios/proyectos/solicitud.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -79,26 +92,27 @@
           <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="9" />
           <entry key="project.open.time.1" value="11" />
-          <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="5" />
+          <entry key="project.open.time.10" value="5" />
+          <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.13" value="4" />
-          <entry key="project.open.time.14" value="2" />
-          <entry key="project.open.time.15" value="5" />
+          <entry key="project.open.time.13" value="5" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="6" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.21" value="5" />
+          <entry key="project.open.time.21" value="6" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="3" />
           <entry key="project.open.time.25" value="5" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.28" value="2" />
-          <entry key="project.open.time.3" value="12" />
+          <entry key="project.open.time.3" value="13" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="1" />
@@ -111,7 +125,7 @@
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.open.time.5" value="7" />
+          <entry key="project.open.time.5" value="8" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.57" value="2" />
@@ -119,34 +133,34 @@
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.74" value="1" />
-          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="136" />
+          <entry key="project.opened" value="149" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
           <entry key="gitignore" value="4" />
-          <entry key="js" value="14893" />
+          <entry key="js" value="16365" />
           <entry key="json" value="32" />
-          <entry key="txt" value="100" />
+          <entry key="txt" value="131" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="32" />
-          <entry key="JavaScript" value="14893" />
-          <entry key="PLAIN_TEXT" value="107" />
+          <entry key="JavaScript" value="16365" />
+          <entry key="PLAIN_TEXT" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
-          <entry key="js" value="621" />
+          <entry key="js" value="658" />
           <entry key="json" value="8" />
           <entry key="jsx" value="1" />
-          <entry key="log" value="12" />
+          <entry key="log" value="15" />
           <entry key="ts" value="2" />
         </counts>
       </usages-collector>
@@ -154,8 +168,8 @@
         <counts>
           <entry key="JSON" value="8" />
           <entry key="JSX Harmony" value="1" />
-          <entry key="JavaScript" value="621" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="JavaScript" value="658" />
+          <entry key="PLAIN_TEXT" value="17" />
           <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
@@ -169,51 +183,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlador/adquision_predial/routes.js">
+        <entry file="file://$PROJECT_DIR$/controlador/expedientes/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="115" selection-start-line="9" selection-start-column="115" selection-end-line="9" selection-end-column="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servicios/visor_geografico/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+            <state relative-caret-position="170">
+              <caret line="10" column="105" selection-start-line="10" selection-start-column="105" selection-end-line="10" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlador/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlador/visor_geografico/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controlador/proyecto/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="105" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlador/proyecto/controllers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41">
-              <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
+            <state relative-caret-position="136">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -221,38 +203,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servicios/proyectos/solicitud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="2533">
+              <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servicios/equipos/equipos.js">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/expedientes.js">
+        <entry file="file://$PROJECT_DIR$/controlador/expedientes/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8398">
-              <caret line="494" column="10" selection-start-line="494" selection-start-column="10" selection-end-line="494" selection-end-column="10" />
+            <state relative-caret-position="1853">
+              <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/equipos.js">
+        <entry file="file://$PROJECT_DIR$/servicios/expedientes/expediente.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="33" selection-end-column="9" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controlador/visor_geografico/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controlador/proyecto/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controlador/proyecto/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2788">
+              <caret line="164" column="15" selection-start-line="164" selection-start-column="15" selection-end-line="164" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/servicios/visor_geografico/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -269,8 +284,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>router</find>
-      <find>seque</find>
       <find>cerra</find>
       <find>finalizado</find>
       <find>alon</find>
@@ -295,9 +308,12 @@
       <find>details-equipo</find>
       <find>responsables</find>
       <find>equipo_services</find>
-      <find>ser</find>
       <find>predioService</find>
       <find>resumen-proyectos</find>
+      <find>organo_solicitante</find>
+      <find>ser</find>
+      <find>expedienteService</find>
+      <find>expedienteSearch</find>
     </findStrings>
     <replaceStrings>
       <replace>brigadista</replace>
@@ -309,13 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controlador/maestros/controllers.js" />
-        <option value="$PROJECT_DIR$/controlador/maestros/routes.js" />
-        <option value="$PROJECT_DIR$/models/tipo_propietario.js" />
-        <option value="$PROJECT_DIR$/models/condicion_propietario.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/models/propietarios.js" />
-        <option value="$PROJECT_DIR$/controlador/accessobdgrafica/routes.js" />
         <option value="$PROJECT_DIR$/models/proyecto.js" />
         <option value="$PROJECT_DIR$/controlador/tipoinfraestructura/routes.js" />
         <option value="$PROJECT_DIR$/controlador/tipoinfraestructura/controllers.js" />
@@ -328,8 +337,6 @@
         <option value="$PROJECT_DIR$/models/predios.js" />
         <option value="$PROJECT_DIR$/controlador/predio/controllers.js" />
         <option value="$PROJECT_DIR$/controlador/predio/routes.js" />
-        <option value="$PROJECT_DIR$/controlador/expedientes/routes.js" />
-        <option value="$PROJECT_DIR$/controlador/expedientes/controllers.js" />
         <option value="$PROJECT_DIR$/servicios/predios/predios.js" />
         <option value="$PROJECT_DIR$/models/files_expediente.js" />
         <option value="$PROJECT_DIR$/controlador/files_expediente/routes.js" />
@@ -341,17 +348,12 @@
         <option value="$PROJECT_DIR$/servicios/sujeto_pasivo/sujeto_pasivo.js" />
         <option value="$PROJECT_DIR$/controlador/sujeto_pasivo/controllers.js" />
         <option value="$PROJECT_DIR$/servicios/trabajador_ddp/index.js" />
-        <option value="$PROJECT_DIR$/controlador/equipo/controllers.js" />
-        <option value="$PROJECT_DIR$/controlador/equipo/routes.js" />
         <option value="$PROJECT_DIR$/models/consulta_entidades.js" />
         <option value="$PROJECT_DIR$/models/inspeccion_campo.js" />
         <option value="$PROJECT_DIR$/controlador/accessobdgrafica/controllers.js" />
         <option value="$PROJECT_DIR$/models/proyectos.js" />
         <option value="$PROJECT_DIR$/servicios/diagnostico/diagnostico.js" />
         <option value="$PROJECT_DIR$/controlador/diagnostico/controllers.js" />
-        <option value="$PROJECT_DIR$/servicios/equipos/equipos.js" />
-        <option value="$PROJECT_DIR$/servicios/proyectos/solicitud.js" />
-        <option value="$PROJECT_DIR$/controlador/proyecto/controllers.js" />
         <option value="$PROJECT_DIR$/controlador/adquision_predial/routes.js" />
         <option value="$PROJECT_DIR$/models/adquisicion_predial.js" />
         <option value="$PROJECT_DIR$/models/expedientes.js" />
@@ -359,7 +361,21 @@
         <option value="$PROJECT_DIR$/controlador/visor_geografico/routes.js" />
         <option value="$PROJECT_DIR$/controlador/visor_geografico/controllers.js" />
         <option value="$PROJECT_DIR$/servicios/visor_geografico/index.js" />
+        <option value="$PROJECT_DIR$/controlador/maestros/controllers.js" />
+        <option value="$PROJECT_DIR$/controlador/maestros/routes.js" />
+        <option value="$PROJECT_DIR$/models/tipoproyectos.js" />
+        <option value="$PROJECT_DIR$/models/tipoinfraestructura.js" />
+        <option value="$PROJECT_DIR$/models/organo_solicitante.js" />
+        <option value="$PROJECT_DIR$/controlador/brigada/routes.js" />
+        <option value="$PROJECT_DIR$/controlador/equipo/controllers.js" />
+        <option value="$PROJECT_DIR$/controlador/equipo/routes.js" />
+        <option value="$PROJECT_DIR$/controlador/proyecto/controllers.js" />
+        <option value="$PROJECT_DIR$/servicios/proyectos/solicitud.js" />
+        <option value="$PROJECT_DIR$/servicios/equipos/equipos.js" />
+        <option value="$PROJECT_DIR$/controlador/expedientes/routes.js" />
+        <option value="$PROJECT_DIR$/controlador/expedientes/controllers.js" />
         <option value="$PROJECT_DIR$/controlador/proyecto/routes.js" />
+        <option value="$PROJECT_DIR$/servicios/expedientes/expediente.js" />
       </list>
     </option>
   </component>
@@ -389,6 +405,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -399,24 +416,19 @@
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="controlador" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="controlador" type="462c0819:PsiDirectoryNode" />
-              <item name="adquision_predial" type="462c0819:PsiDirectoryNode" />
+              <item name="equipo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="controlador" type="462c0819:PsiDirectoryNode" />
-              <item name="predio" type="462c0819:PsiDirectoryNode" />
+              <item name="expedientes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
@@ -428,35 +440,17 @@
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="controlador" type="462c0819:PsiDirectoryNode" />
-              <item name="uploaders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-              <item name="controlador" type="462c0819:PsiDirectoryNode" />
               <item name="visor_geografico" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="servicios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-              <item name="servicios" type="462c0819:PsiDirectoryNode" />
-              <item name="clientes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-              <item name="servicios" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnostico" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
@@ -468,25 +462,19 @@
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="servicios" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="expedientes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="servicios" type="462c0819:PsiDirectoryNode" />
-              <item name="maestros" type="462c0819:PsiDirectoryNode" />
+              <item name="predios" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
               <item name="servicios" type="462c0819:PsiDirectoryNode" />
               <item name="proyectos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-              <item name="servicios" type="462c0819:PsiDirectoryNode" />
-              <item name="solicitud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Back-End" type="b2602c69:ProjectViewProjectNode" />
@@ -503,12 +491,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/dcs-tools-master/dcs-tools-master/react-redux" />
+    <property name="last_opened_file_path" value="D:/visorMTC/visorarmandomodi4x" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -728,7 +715,20 @@
       <workItem from="1575467266923" duration="16960000" />
       <workItem from="1575735767800" duration="1642000" />
       <workItem from="1575898582358" duration="6439000" />
-      <workItem from="1575920058484" duration="1419000" />
+      <workItem from="1575920058484" duration="6166000" />
+      <workItem from="1576184962990" duration="5171000" />
+      <workItem from="1576245203914" duration="10069000" />
+      <workItem from="1576370525115" duration="1334000" />
+      <workItem from="1576503367246" duration="257000" />
+      <workItem from="1576504911661" duration="3398000" />
+      <workItem from="1576591060328" duration="3463000" />
+      <workItem from="1576617479986" duration="1701000" />
+      <workItem from="1576677317551" duration="5612000" />
+      <workItem from="1576763847445" duration="1191000" />
+      <workItem from="1576947012180" duration="595000" />
+      <workItem from="1577133124207" duration="621000" />
+      <workItem from="1577368752601" duration="599000" />
+      <workItem from="1577374667113" duration="592000" />
     </task>
     <task id="LOCAL-00001" summary="modificado el proyecto">
       <created>1573221431542</created>
@@ -765,11 +765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575508738852</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="WEBSERVICES PARA VISOR DE MAPAS">
+      <created>1576014104622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576014104622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="662850000" />
+    <option name="totallyTimeSpent" value="702200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,14 +788,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
+    <frame x="-7" y="2" width="1932" height="1045" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16209081" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5762898" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12184413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41602635" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -814,7 +822,8 @@
     <MESSAGE value="agregando las funcionalidades de expediente" />
     <MESSAGE value="exposicion" />
     <MESSAGE value="grid dinamico" />
-    <option name="LAST_COMMIT_MESSAGE" value="grid dinamico" />
+    <MESSAGE value="WEBSERVICES PARA VISOR DE MAPAS" />
+    <option name="LAST_COMMIT_MESSAGE" value="WEBSERVICES PARA VISOR DE MAPAS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -834,6 +843,11 @@
           <line>54</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controlador/expedientes/controllers.js</url>
+          <line>109</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -846,114 +860,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controlador/proceso_1/controllers.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/tipoinfraestructura/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/middlewares/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/predios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1082">
-          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/propietarios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/files_expediente.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servicios/predios/predios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/predio/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/files_expediente/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="62" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/files_expediente/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="111" selection-start-line="8" selection-start-column="111" selection-end-line="8" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/trabajador/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/trabajador/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="109" selection-start-line="7" selection-start-column="109" selection-end-line="7" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/sujeto_pasivo/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/sujeto_pasivo/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servicios/sujeto_pasivo/sujeto_pasivo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servicios/trabajador_ddp/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/consulta_entidades.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1013,48 +919,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/brigada/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/brigada/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" selection-start-line="129" selection-end-line="143" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/equipo/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="109" selection-start-line="11" selection-start-column="109" selection-end-line="11" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/equipo/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/expedientes/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="101" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/expedientes/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/adquisicion_predial.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7922">
@@ -1096,20 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/visor_geografico/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/predio/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servicios/diagnostico/diagnostico.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1117,44 +967,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/adquision_predial/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="115" selection-start-line="9" selection-start-column="115" selection-end-line="9" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servicios/visor_geografico/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servicios/equipos/equipos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/expedientes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8398">
-          <caret line="494" column="10" selection-start-line="494" selection-start-column="10" selection-end-line="494" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/equipos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1165,24 +981,211 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servicios/proyectos/solicitud.js">
+    <entry file="file://$PROJECT_DIR$/controlador/login/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="283">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/proyecto/controllers.js">
+    <entry file="file://$PROJECT_DIR$/servicios/login/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
+        <state relative-caret-position="442">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/adquision_predial/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverConfig/errorHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/error.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/infra/jwt/tokenManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/organo_solicitante.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ubicacion_predio.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/maestros/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tipoproyectos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/maestros/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tipoinfraestructura.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tipointegrante.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/predio/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3502">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/expedientes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="494" column="10" selection-start-line="494" selection-start-column="10" selection-end-line="494" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servicios/predios/predios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/equipo/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="109" selection-start-line="11" selection-start-column="109" selection-end-line="11" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/equipo/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" selection-start-line="52" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servicios/equipos/equipos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/4XX.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/brigada/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/brigada/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/expedientes/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="105" selection-start-line="10" selection-start-column="105" selection-end-line="10" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servicios/proyectos/solicitud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/expedientes/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servicios/expedientes/expediente.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/visor_geografico/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controlador/proyecto/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="105" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/proyecto/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="164" column="15" selection-start-line="164" selection-start-column="15" selection-end-line="164" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servicios/visor_geografico/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
         </state>
       </provider>
     </entry>

@@ -10,7 +10,8 @@ module.exports = {
     addIntegrante,
     busquedaEquipos,
     detailsEquipo,
-    delIntegrante
+    delIntegrante,
+    equipobyProy
 };
 
 
@@ -133,6 +134,23 @@ async function delIntegrante(req, res, next) {
     } catch (e) {
         t.rollback();
         return next(e);
+    }
+}
+
+
+//Obteniendo los datos de la brigada de un proyecto
+async function equipobyProy(req, res, next) {
+    try {
+        if (req.query.codproy == undefined) {
+            throw {error: new Error("Argumentos no encontrados"), status: 400, message: "Ha habido un error"};
+        }
+        let codproy=req.query.codproy;
+        let detalleequipo = await equipo_services.equipobyProy(codproy);
+        return res.status(200).send(detalleequipo);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
     }
 }
 

@@ -8,6 +8,8 @@ module.exports = ({router}) => {
     router.get('/list-proyectos', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.listarProyectos);
     router.get('/drpProyectos', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.drpProyectos);
     router.get('/proyecto/:codigo_proyecto', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.getProyecto);
+    router.get('/proyecto-configuracion', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.getDataConfiguracionbyProy);
+    router.get('/proyecto-files', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.getDataFilesPortadabyProy);
     /*Resumen Party*/
     router.get('/resumen-proyectos', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.resumenProyectos);
     router.get('/resumen-proyectos-codigo', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.resumenProyectosbyCodigo);
@@ -17,4 +19,5 @@ module.exports = ({router}) => {
     /*Delete solicitud*/
     router.delete('/deleteproyecto', validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]), controller.deleted);
     router.get('/aporte-proyectos-codigo', controller.resumenProyectosbyCodigo);
+    router.get('/ambito-proyecto',  validateToken, AccesoRoles([ADMIN, BRIGADISTA, COORDINADOR]),controller.ambitogeografico);
 }

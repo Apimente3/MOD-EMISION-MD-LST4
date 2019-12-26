@@ -1,7 +1,5 @@
-/* jshint indent: 2 */
-
 module.exports = function (sequelize, DataTypes) {
-    return sequelize.define('tipoproyecto', {
+    return sequelize.define('organo_solicitante', {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -13,7 +11,8 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true
         }
     }, {
-        tableName: 'tipoproyecto',
-        schema: "pred"
+        timestamps: false,
+        tableName: 'organo_solicitante',
+        schema: 'pred'
     });
 };

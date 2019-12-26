@@ -17,6 +17,7 @@ module.exports = ({router}) => {
 
     router.get('/tipo_propietario', controller.tipo_propietario);
     router.get('/condicion_propietario', controller.condicion_propietario);
+    router.get('/organo_solicitante', controller.organo_solicitante);
     
    
 

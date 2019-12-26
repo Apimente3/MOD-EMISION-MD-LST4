@@ -6,6 +6,7 @@ const controller = require('./controllers')
 module.exports = ({router}) => {
     /*Lista todos los Brigasdistas*/
     router.get('/gettrabajadores',validateToken,AccesoRoles([ADMIN,BRIGADISTA,COORDINADOR]), controller.getTrabajadores);
+
     /*Obtiene un trabajador por id*/
     router.get('/brigada/:id',validateToken,AccesoRoles([ADMIN,BRIGADISTA,COORDINADOR]), controller.getone);
     /*Registra un trabajador*/

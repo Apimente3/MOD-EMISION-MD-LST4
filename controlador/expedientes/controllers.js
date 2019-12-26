@@ -2,13 +2,14 @@
 "use strict";
 
 const models = require('../../models');
-const predioService = require('./../../servicios/predios/predios');
+const expedienteService = require('./../../servicios/expedientes/expediente');
 const Op = models.Sequelize.Op;
 
 module.exports = {
     save,
     deleted,
-    getExpedientebyPredio
+    getExpedientebyPredio,
+    expedienteSearch
 };
 
 
@@ -93,5 +94,26 @@ async function getExpedientebyPredio(req, res, next) {
     }
 }
 
+
+async function expedienteSearch(req, res, next) {
+    try {
+        if (req.query.opcion == undefined) {
+            throw {error: new Error("Argumentos no encontrados de opcion de busqueda"), status: 400, message: "Ha habido un error"};
+        }
+        if (req.query.idproyecto == undefined) {
+            throw {error: new Error("Argumentos no encontrados del ID del Proyecto"), status: 400, message: "Ha habido un error"};
+        }
+        if (req.query.busqueda == undefined) {
+            throw {error: new Error("Argumentos no encontrados de la busqueda"), status: 400, message: "Ha habido un error"};
+        }
+        
+        let listadoExpedientes = await expedienteService.busquedaExpediente(req.query.opcion, req.query.idproyecto, req.query.busqueda);
+        return res.status(200).send(listadoExpedientes);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
 
 

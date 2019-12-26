@@ -15,7 +15,10 @@ module.exports = {
     resumenProyectosbyCodigo,
     drpProyectos,
     getProyecto,
-    solicitudesVinculadas
+    solicitudesVinculadas,
+    ambitogeografico,
+    getDataConfiguracionbyProy,
+    getDataFilesPortadabyProy
 };
 
 /*Guarda los datos generales de un predio*/
@@ -107,10 +110,10 @@ async function resumenProyectosbyCodigo(req, res, next) {
     try {
         let solicitudes = await Service.resumenProyectosbyCodigo(req.query.codigo);
         
-        let detalleequipo = await equipo_services.detailsEquipo(solicitudes[0].id);
-        let predios = await predioService.getPrediosbyProyecto(req.query.codigo,'');
+       // let detalleequipo = await equipo_services.detailsEquipo(solicitudes[0].id);
+       let predios = await predioService.getPrediosbyProyecto(req.query.codigo,'');
 
-        for (var i = 0; i < predios.length; i++) {
+       for (var i = 0; i < predios.length; i++) {
             let propiedadAnt=null
             propiedadAnt={...(predios[i].polygonojson.features[0].properties),...predios[i]}
             console.log(propiedadAnt)
@@ -168,6 +171,45 @@ async function getProyecto(req, res, next) {
         });
         console.log(object)
         return res.status(200).send(object);
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+//Obtiene el ambito de trabajo del proyecto  respoecto a la as capas de departamento , provincias y distritos
+async function ambitogeografico(req, res, next) {
+    try {
+        let solicitudes = await Service.ambitogeografico(req.query.codigo);
+        return res.status(200).send(solicitudes);
+        // return res.status(200).send({});
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+//mustrar los datos para la configuracion de un predio
+async function getDataConfiguracionbyProy(req, res, next) {
+    try {
+        let object  = await Service.getDataConfiguracionbyProy(req.query.codigo);
+        return res.status(200).send(object);
+        // return res.status(200).send({});
+    }
+    catch (err) {
+        //  t.rollback();
+        return next(err);
+    }
+}
+
+//Obtiene los datos de los archivo e imaggenes de un predio
+async function getDataFilesPortadabyProy(req, res, next) {
+    try {
+        let solicitudes = await Service.getDataFilesPortadabyProy(req.query.codigo);
+        return res.status(200).send(solicitudes);
+        // return res.status(200).send({});
     }
     catch (err) {
         //  t.rollback();
