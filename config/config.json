@@ -1,10 +1,11 @@
 {
   "development": {
     "username": "postgres",
-    "password": "1234",
-    "database": "mtc2",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "password": "selmira1",
+    "database": "ddp_plataforma",
+    "host": "200.121.128.102",
+    "dialect": "postgres",
+    "port":"5432"
   },
   "test": {
     "username": "root",
